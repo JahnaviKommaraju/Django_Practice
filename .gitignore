@@ -1,4 +1,4 @@
 challenges/
 db.sqlite3
 manage.py
-django_challenges/settings.py
+django_challenges
