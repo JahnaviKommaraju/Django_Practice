@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block page_title %} {{month_name| title}} Challenge{% endblock  %}
+
+{% block content %}
+    {% include "./includes/header.html" %}  <!--it is relative path-->
+
+    {% comment %} {% include "./includes/header.html" with active_page='challenge'%} <!--to highlight the active link--> {% endcomment %}
+    {{month_name}} Challenge</h1>
+    {%if month %} 
+     <h2>{{month | title}}</h2> <!--here, title is filter in templates (|->pipe)-->
+   {%else%}
+        <h1>No challenege</h1>
+    {% endif %}
+{% endblock  %}
+
+
+
+
+
+
+{% comment %} #-----WITHOUT EXTENDS-------- {% endcomment %}
+<!--
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>{{month_name| title}} Challenge</title> 
+</head> 
+<body> 
+    {{month_name}} Challenge</h1> --><!--{{key_name}} it is string interpolation n return the value of given key--> 
+    {% comment %} if conditions {% endcomment %} 
+  <!--  {%if month %} <h2>{{month | title}}</h2>--> <!--here, title is filter in templates (|->pipe)--> 
+  <!--  {%else%} <h1>No challenege</h1> 
+    {% endif %} 
+</body> 
+</html>
+-->
+
+
+
+
+
+
+
+
+
+

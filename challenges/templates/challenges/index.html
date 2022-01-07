@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %} <!--to use static files-->
+{% block css_files %}{% endblock css_files %}
+<link rel="stylesheet" href="">
+
+{% block page_title%}All Months{% endblock  %}
+    
+    {% block content %}
+     {% include "./includes/header.html" %}  <!--it is relative path-->
+    {% comment %} {% include "./includes/header.html" with active_page='index'%} <!--to highlight the active link--> {% endcomment %}
+    <ul>
+        {%for month in months%}
+            {% comment %} <li><a href="/challenges/{{month}}">{{month|title}}</a></li>  {% endcomment %}
+            <!--here again, /challenges/ is hardcoding n reverse() isn't supported by templates-->
+            <!-- ####So, we use url -> to create urls dymanically####-->
+            <li><a href="{% url "month_info" month%}">{{month|title}}</a></li>
+
+        {% endfor %}
+    </ul>
+    {% endblock  %}
+
+
+
+
+
+
+{% comment %} #-----WITHOUT EXTENDS-------- {% endcomment %}
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Months</title>
+</head>
+<body>
+    <ul> 
+        {%for month in months%}-->
+            <!-- <li><a href="/challenges/{{month}}">{{month|title}}</a></li> -->
+            <!--here again, /challenges/ is hardcoding n reverse() isn't supported by templates-->
+            <!-- ####So, we use url -> to create urls dymanically####-->
+           <!-- <li><a href="{% url "month_info" month%}">{{month|title}}</a></li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
