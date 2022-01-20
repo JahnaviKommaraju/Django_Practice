@@ -1,2 +1,3 @@
 django_challenges/settings.py
-__pycache__
+django_challenges/django_challenges/__pycache__
+django_challenges/challenges/__pycache__
