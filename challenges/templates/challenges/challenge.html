@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{%static "challenges/each_months.css"%}">
+<link rel="stylesheet" href="{%static "challenges/includes/header.css"%}">
+{% endblock %}
+
+
 {% block page_title %} {{month_name| title}} Challenge{% endblock  %}
 
 {% block content %}
     {% include "./includes/header.html" %}  <!--it is relative path-->
 
     {% comment %} {% include "./includes/header.html" with active_page='challenge'%} <!--to highlight the active link--> {% endcomment %}
-    {{month_name}} Challenge</h1>
+    <h1> {{month_name}} Challenge</h1>
     {%if month %} 
      <h2>{{month | title}}</h2> <!--here, title is filter in templates (|->pipe)-->
    {%else%}

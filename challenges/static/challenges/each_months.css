@@ -1,0 +1,25 @@
+h1,h2{
+    text-align: center;
+    color: rgb(8, 37, 61);
+}
+
+h1{
+    font-size: rem;
+    margin: 2 rem 0 1rem 0;
+    font-weight: bold;
+    color: rgb(75, 14, 116);
+    /* font-weight: bold;
+    text-align: center;
+    color: rgb(24, 2, 59); */
+}
+
+h2{
+    font-size: 5rem;
+    font-weight: bold;
+    /* text-align: center;
+    color: rgb(24, 2, 59); */
+}
+
+body{
+    background-color: grey;
+}
