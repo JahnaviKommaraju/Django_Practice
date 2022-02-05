@@ -48,7 +48,8 @@ def num_months(request,month):
         return HttpResponse('Invalid month')
     redirect_month=all_months[month-1]
     # return HttpResponseRedirect('/challenges/'+ redirect_month)  
-    # #-> here, we are hardcoding the path and if we want to change the url name then we have to change in multiple locations. so to avoid that we use reverse()
+    # #-> here, we are hardcoding the path and if we want to change the url name then we have to change in multiple locations.
+    #  so to avoid that we use reverse()
     #####for redirecting always use reverse()########
     redirect_path=reverse('month_info',args=[redirect_month]) # /challenges/january here, args is a array/list of dynamic values
     return HttpResponseRedirect(redirect_path)

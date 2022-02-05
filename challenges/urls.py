@@ -8,6 +8,6 @@ urlpatterns=[
     # path('<month>',views.every_month), (here,<var_name> is for dynamic input 
     path("",views.home_page,name='index'),
     path("<int:month>",views.num_months),
-    path("<str:month>",views.get_months, name='month_info')  #('<str:var_name> consider i/p as string)
+    path("<str:month>",views.get_months, name='month_info')  #(<slug>->'<str:var_name> consider i/p as string)
     
 ]
